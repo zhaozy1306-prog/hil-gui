@@ -1,0 +1,6 @@
+# Python requirements for BCM Window Controller GUI
+# No external dependencies required - uses built-in tkinter
+# Python 3.6+ recommended
+
+# Optional: For serial communication with real STM32 hardware
+# pyserial>=3.5

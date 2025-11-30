@@ -4,7 +4,7 @@
   "description": "Tesla Vehicle HMI Mock - Electron + React + TypeScript + TailwindCSS",
   "main": "dist/electron/main.js",
   "scripts": {
-    "start": "concurrently \"npm run start:renderer\" \"npm run start:electron\"",
+    "start": "npm run build:electron && concurrently \"npm run start:renderer\" \"npm run start:electron\"",
     "start:renderer": "webpack serve --config webpack.renderer.config.js --mode development",
     "start:electron": "wait-on http://localhost:3000 && electron .",
     "build": "npm run build:renderer && npm run build:electron",

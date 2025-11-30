@@ -19,7 +19,12 @@ function createWindow(): void {
   });
 
   // Load the app
-  if (process.env.NODE_ENV === 'development') {
+  // In development, we load from webpack dev server
+  // Check if we're in development by looking for the ELECTRON_IS_DEV env var
+  // or by checking if dist/renderer/index.html exists
+  const isDev = process.env.ELECTRON_IS_DEV === '1' || !app.isPackaged;
+
+  if (isDev) {
     mainWindow.loadURL('http://localhost:3000');
     mainWindow.webContents.openDevTools();
   } else {

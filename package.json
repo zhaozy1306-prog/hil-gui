@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run build:electron && concurrently \"npm run start:renderer\" \"npm run start:electron\"",
     "start:renderer": "webpack serve --config webpack.renderer.config.js --mode development",
-    "start:electron": "wait-on http://localhost:3000 && electron .",
+    "start:electron": "wait-on http://localhost:3000 && cross-env ELECTRON_IS_DEV=1 electron .",
     "build": "npm run build:renderer && npm run build:electron",
     "build:renderer": "webpack --config webpack.renderer.config.js --mode production",
     "build:electron": "tsc -p tsconfig.electron.json",
@@ -32,6 +32,7 @@
     "@typescript-eslint/parser": "^6.15.0",
     "autoprefixer": "^10.4.16",
     "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.8.1",
     "electron": "^28.0.0",
     "electron-builder": "^24.9.1",

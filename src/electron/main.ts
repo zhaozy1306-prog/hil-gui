@@ -18,17 +18,12 @@ function createWindow(): void {
     },
   });
 
-  // Load the app
-  // In development, we load from webpack dev server
-  // Check if we're in development by looking for the ELECTRON_IS_DEV env var
-  // or by checking if dist/renderer/index.html exists
-  const isDev = process.env.ELECTRON_IS_DEV === '1' || !app.isPackaged;
+  // Load the app from local file
+  mainWindow.loadFile(path.join(__dirname, '../renderer/index.html'));
 
-  if (isDev) {
-    mainWindow.loadURL('http://localhost:3000');
+  // Open DevTools in development mode
+  if (!app.isPackaged) {
     mainWindow.webContents.openDevTools();
-  } else {
-    mainWindow.loadFile(path.join(__dirname, '../renderer/index.html'));
   }
 
   mainWindow.on('closed', () => {

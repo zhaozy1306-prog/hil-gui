@@ -32,22 +32,22 @@ const TeslaCar: React.FC<TeslaCarProps> = ({ doorStates, onDoorClick }) => {
       {/* Main Car Body */}
       <mesh position={[0, 0.5, 0]} castShadow receiveShadow>
         <boxGeometry args={[4, 1, 2]} />
-        <meshStandardMaterial color="#1a1a2e" metalness={0.8} roughness={0.2} />
+        <meshStandardMaterial color="#f0f0f0" metalness={0.7} roughness={0.3} />
       </mesh>
 
       {/* Car Roof */}
       <mesh position={[0, 1.2, 0]} castShadow>
         <boxGeometry args={[3.5, 0.4, 1.8]} />
-        <meshStandardMaterial color="#1a1a2e" metalness={0.8} roughness={0.2} />
+        <meshStandardMaterial color="#f0f0f0" metalness={0.7} roughness={0.3} />
       </mesh>
 
       {/* Windshield */}
       <mesh position={[1.5, 1.2, 0]} rotation={[0, 0, -0.3]} castShadow>
         <boxGeometry args={[0.8, 0.6, 1.8]} />
         <meshStandardMaterial
-          color="#4a5568"
+          color="#87ceeb"
           transparent
-          opacity={0.3}
+          opacity={0.4}
           metalness={0.9}
           roughness={0.1}
         />
@@ -57,9 +57,9 @@ const TeslaCar: React.FC<TeslaCarProps> = ({ doorStates, onDoorClick }) => {
       <mesh position={[-1.5, 1.2, 0]} rotation={[0, 0, 0.3]} castShadow>
         <boxGeometry args={[0.8, 0.6, 1.8]} />
         <meshStandardMaterial
-          color="#4a5568"
+          color="#87ceeb"
           transparent
-          opacity={0.3}
+          opacity={0.4}
           metalness={0.9}
           roughness={0.1}
         />
@@ -77,18 +77,18 @@ const TeslaCar: React.FC<TeslaCarProps> = ({ doorStates, onDoorClick }) => {
         <mesh castShadow>
           <boxGeometry args={[1.2, 1, 0.1]} />
           <meshStandardMaterial
-            color={doorStates.frontLeft ? '#e82127' : '#2a2a3e'}
-            metalness={0.8}
-            roughness={0.2}
+            color={doorStates.frontLeft ? '#ff6b6b' : '#f0f0f0'}
+            metalness={0.7}
+            roughness={0.3}
           />
         </mesh>
         {/* Door Window */}
         <mesh position={[0, 0.3, 0]}>
           <boxGeometry args={[0.8, 0.4, 0.05]} />
           <meshStandardMaterial
-            color="#4a5568"
+            color="#87ceeb"
             transparent
-            opacity={0.3}
+            opacity={0.4}
             metalness={0.9}
             roughness={0.1}
           />
@@ -107,18 +107,18 @@ const TeslaCar: React.FC<TeslaCarProps> = ({ doorStates, onDoorClick }) => {
         <mesh castShadow>
           <boxGeometry args={[1.2, 1, 0.1]} />
           <meshStandardMaterial
-            color={doorStates.frontRight ? '#e82127' : '#2a2a3e'}
-            metalness={0.8}
-            roughness={0.2}
+            color={doorStates.frontRight ? '#ff6b6b' : '#f0f0f0'}
+            metalness={0.7}
+            roughness={0.3}
           />
         </mesh>
         {/* Door Window */}
         <mesh position={[0, 0.3, 0]}>
           <boxGeometry args={[0.8, 0.4, 0.05]} />
           <meshStandardMaterial
-            color="#4a5568"
+            color="#87ceeb"
             transparent
-            opacity={0.3}
+            opacity={0.4}
             metalness={0.9}
             roughness={0.1}
           />
@@ -137,18 +137,18 @@ const TeslaCar: React.FC<TeslaCarProps> = ({ doorStates, onDoorClick }) => {
         <mesh castShadow>
           <boxGeometry args={[1.2, 1, 0.1]} />
           <meshStandardMaterial
-            color={doorStates.rearLeft ? '#e82127' : '#2a2a3e'}
-            metalness={0.8}
-            roughness={0.2}
+            color={doorStates.rearLeft ? '#ff6b6b' : '#f0f0f0'}
+            metalness={0.7}
+            roughness={0.3}
           />
         </mesh>
         {/* Door Window */}
         <mesh position={[0, 0.3, 0]}>
           <boxGeometry args={[0.8, 0.4, 0.05]} />
           <meshStandardMaterial
-            color="#4a5568"
+            color="#87ceeb"
             transparent
-            opacity={0.3}
+            opacity={0.4}
             metalness={0.9}
             roughness={0.1}
           />
@@ -167,18 +167,18 @@ const TeslaCar: React.FC<TeslaCarProps> = ({ doorStates, onDoorClick }) => {
         <mesh castShadow>
           <boxGeometry args={[1.2, 1, 0.1]} />
           <meshStandardMaterial
-            color={doorStates.rearRight ? '#e82127' : '#2a2a3e'}
-            metalness={0.8}
-            roughness={0.2}
+            color={doorStates.rearRight ? '#ff6b6b' : '#f0f0f0'}
+            metalness={0.7}
+            roughness={0.3}
           />
         </mesh>
         {/* Door Window */}
         <mesh position={[0, 0.3, 0]}>
           <boxGeometry args={[0.8, 0.4, 0.05]} />
           <meshStandardMaterial
-            color="#4a5568"
+            color="#87ceeb"
             transparent
-            opacity={0.3}
+            opacity={0.4}
             metalness={0.9}
             roughness={0.1}
           />
@@ -197,9 +197,9 @@ const TeslaCar: React.FC<TeslaCarProps> = ({ doorStates, onDoorClick }) => {
         <mesh castShadow>
           <boxGeometry args={[0.4, 0.6, 1.8]} />
           <meshStandardMaterial
-            color={doorStates.frunk ? '#e82127' : '#2a2a3e'}
-            metalness={0.8}
-            roughness={0.2}
+            color={doorStates.frunk ? '#ff6b6b' : '#f0f0f0'}
+            metalness={0.7}
+            roughness={0.3}
           />
         </mesh>
       </group>
@@ -216,9 +216,9 @@ const TeslaCar: React.FC<TeslaCarProps> = ({ doorStates, onDoorClick }) => {
         <mesh castShadow>
           <boxGeometry args={[0.4, 0.8, 1.8]} />
           <meshStandardMaterial
-            color={doorStates.trunk ? '#e82127' : '#2a2a3e'}
-            metalness={0.8}
-            roughness={0.2}
+            color={doorStates.trunk ? '#ff6b6b' : '#f0f0f0'}
+            metalness={0.7}
+            roughness={0.3}
           />
         </mesh>
       </group>
@@ -319,7 +319,7 @@ const CarVisualization: React.FC = () => {
   return (
     <div className="relative w-full max-w-4xl">
       {/* 3D Canvas */}
-      <div className="w-full h-96 bg-gradient-to-b from-tesla-darkgray to-tesla-dark rounded-xl overflow-hidden">
+      <div className="w-full h-96 bg-gradient-to-b from-gray-100 to-gray-200 rounded-xl overflow-hidden">
         <Canvas shadows>
           {/* Camera */}
           <PerspectiveCamera makeDefault position={[8, 4, 8]} fov={50} />
@@ -346,14 +346,14 @@ const CarVisualization: React.FC = () => {
           {/* Ground */}
           <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, 0]} receiveShadow>
             <planeGeometry args={[50, 50]} />
-            <meshStandardMaterial color="#0a0a0a" metalness={0.3} roughness={0.8} />
+            <meshStandardMaterial color="#e0e0e0" metalness={0.2} roughness={0.7} />
           </mesh>
 
           {/* Tesla Car */}
           <TeslaCar doorStates={doorStates} onDoorClick={toggleDoor} />
 
           {/* Grid Helper */}
-          <gridHelper args={[20, 20, '#3e6ae1', '#1a1a1a']} position={[0, -0.49, 0]} />
+          <gridHelper args={[20, 20, '#3e6ae1', '#c0c0c0']} position={[0, -0.49, 0]} />
 
           {/* Orbit Controls */}
           <OrbitControls

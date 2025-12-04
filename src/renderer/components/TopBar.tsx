@@ -7,7 +7,7 @@ interface TopBarProps {
 
 const TopBar: React.FC<TopBarProps> = ({ time }) => {
   const formatTime = (date: Date) => {
-    return date.toLocaleTimeString('en-US', {
+    return date.toLocaleTimeString('zh-CN', {
       hour: '2-digit',
       minute: '2-digit',
       hour12: false,

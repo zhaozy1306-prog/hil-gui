@@ -14,14 +14,14 @@ const ControlPanel: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Title */}
-      <h2 className="text-2xl font-semibold text-center mb-6">Vehicle Controls</h2>
+      <h2 className="text-2xl font-semibold text-center mb-6">车辆控制</h2>
 
       {/* Climate Control */}
       <div className="bg-tesla-gray rounded-xl p-6 space-y-4">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-2">
             <FaTemperatureHigh className="text-tesla-blue text-xl" />
-            <span className="text-sm font-medium">Climate</span>
+            <span className="text-sm font-medium">空调</span>
           </div>
           <FaFan className={`text-xl ${fanSpeed > 0 ? 'text-tesla-blue animate-spin' : 'text-gray-500'}`}
                  style={{ animationDuration: `${3 / fanSpeed}s` }} />
@@ -49,7 +49,7 @@ const ControlPanel: React.FC = () => {
         {/* Fan Speed Control */}
         <div className="pt-4">
           <div className="flex justify-between text-xs mb-2">
-            <span>Fan Speed</span>
+            <span>风速</span>
             <span>{fanSpeed}/3</span>
           </div>
           <input
@@ -78,7 +78,7 @@ const ControlPanel: React.FC = () => {
         >
           {isLocked ? <FaLock className="text-2xl" /> : <FaUnlock className="text-2xl" />}
           <span className="text-lg font-semibold">
-            {isLocked ? 'LOCKED' : 'UNLOCKED'}
+            {isLocked ? '已锁定' : '已解锁'}
           </span>
         </button>
       </div>
@@ -88,7 +88,7 @@ const ControlPanel: React.FC = () => {
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-2">
             <FaChargingStation className={`text-xl ${isCharging ? 'text-green-500' : 'text-gray-500'}`} />
-            <span className="text-sm font-medium">Charging</span>
+            <span className="text-sm font-medium">充电</span>
           </div>
           <button
             onClick={() => setIsCharging(!isCharging)}
@@ -98,14 +98,14 @@ const ControlPanel: React.FC = () => {
                 : 'bg-tesla-lightgray hover:bg-tesla-blue'
             }`}
           >
-            {isCharging ? 'Stop' : 'Start'}
+            {isCharging ? '停止' : '开始'}
           </button>
         </div>
 
         {isCharging && (
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
-              <span>Battery</span>
+              <span>电池</span>
               <span className="text-green-500">85%</span>
             </div>
             <div className="w-full h-3 bg-tesla-lightgray rounded-full overflow-hidden">
@@ -115,8 +115,8 @@ const ControlPanel: React.FC = () => {
               />
             </div>
             <div className="flex justify-between text-xs opacity-70">
-              <span>234 km range</span>
-              <span>~45 min to full</span>
+              <span>续航 234 公里</span>
+              <span>约 45 分钟充满</span>
             </div>
           </div>
         )}
@@ -125,16 +125,16 @@ const ControlPanel: React.FC = () => {
       {/* Quick Actions */}
       <div className="grid grid-cols-2 gap-3">
         <button className="bg-tesla-gray hover:bg-tesla-lightgray py-3 rounded-lg text-sm font-medium transition-colors">
-          Lights
+          车灯
         </button>
         <button className="bg-tesla-gray hover:bg-tesla-lightgray py-3 rounded-lg text-sm font-medium transition-colors">
-          Horn
+          喇叭
         </button>
         <button className="bg-tesla-gray hover:bg-tesla-lightgray py-3 rounded-lg text-sm font-medium transition-colors">
-          Trunk
+          后备箱
         </button>
         <button className="bg-tesla-gray hover:bg-tesla-lightgray py-3 rounded-lg text-sm font-medium transition-colors">
-          Frunk
+          前备箱
         </button>
       </div>
     </div>

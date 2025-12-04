@@ -377,14 +377,14 @@ const CarVisualization: React.FC = () => {
               : 'bg-tesla-gray hover:bg-tesla-lightgray'
           }`}
         >
-          <div className="text-xs opacity-70 mb-1">Front Left</div>
+          <div className="text-xs opacity-70 mb-1">左前门</div>
           <div className="text-sm font-semibold flex items-center justify-center gap-2">
             <span
               className={`w-2 h-2 rounded-full ${
                 doorStates.frontLeft ? 'bg-red-500 animate-pulse' : 'bg-green-500'
               }`}
             />
-            {doorStates.frontLeft ? 'OPEN' : 'CLOSED'}
+            {doorStates.frontLeft ? '开启' : '关闭'}
           </div>
         </button>
 
@@ -397,14 +397,14 @@ const CarVisualization: React.FC = () => {
               : 'bg-tesla-gray hover:bg-tesla-lightgray'
           }`}
         >
-          <div className="text-xs opacity-70 mb-1">Front Trunk</div>
+          <div className="text-xs opacity-70 mb-1">前备箱</div>
           <div className="text-sm font-semibold flex items-center justify-center gap-2">
             <span
               className={`w-2 h-2 rounded-full ${
                 doorStates.frunk ? 'bg-red-500 animate-pulse' : 'bg-green-500'
               }`}
             />
-            {doorStates.frunk ? 'OPEN' : 'CLOSED'}
+            {doorStates.frunk ? '开启' : '关闭'}
           </div>
         </button>
 
@@ -417,14 +417,14 @@ const CarVisualization: React.FC = () => {
               : 'bg-tesla-gray hover:bg-tesla-lightgray'
           }`}
         >
-          <div className="text-xs opacity-70 mb-1">Front Right</div>
+          <div className="text-xs opacity-70 mb-1">右前门</div>
           <div className="text-sm font-semibold flex items-center justify-center gap-2">
             <span
               className={`w-2 h-2 rounded-full ${
                 doorStates.frontRight ? 'bg-red-500 animate-pulse' : 'bg-green-500'
               }`}
             />
-            {doorStates.frontRight ? 'OPEN' : 'CLOSED'}
+            {doorStates.frontRight ? '开启' : '关闭'}
           </div>
         </button>
 
@@ -437,14 +437,14 @@ const CarVisualization: React.FC = () => {
               : 'bg-tesla-gray hover:bg-tesla-lightgray'
           }`}
         >
-          <div className="text-xs opacity-70 mb-1">Rear Left</div>
+          <div className="text-xs opacity-70 mb-1">左后门</div>
           <div className="text-sm font-semibold flex items-center justify-center gap-2">
             <span
               className={`w-2 h-2 rounded-full ${
                 doorStates.rearLeft ? 'bg-red-500 animate-pulse' : 'bg-green-500'
               }`}
             />
-            {doorStates.rearLeft ? 'OPEN' : 'CLOSED'}
+            {doorStates.rearLeft ? '开启' : '关闭'}
           </div>
         </button>
 
@@ -457,14 +457,14 @@ const CarVisualization: React.FC = () => {
               : 'bg-tesla-gray hover:bg-tesla-lightgray'
           }`}
         >
-          <div className="text-xs opacity-70 mb-1">Rear Trunk</div>
+          <div className="text-xs opacity-70 mb-1">后备箱</div>
           <div className="text-sm font-semibold flex items-center justify-center gap-2">
             <span
               className={`w-2 h-2 rounded-full ${
                 doorStates.trunk ? 'bg-red-500 animate-pulse' : 'bg-green-500'
               }`}
             />
-            {doorStates.trunk ? 'OPEN' : 'CLOSED'}
+            {doorStates.trunk ? '开启' : '关闭'}
           </div>
         </button>
 
@@ -477,14 +477,14 @@ const CarVisualization: React.FC = () => {
               : 'bg-tesla-gray hover:bg-tesla-lightgray'
           }`}
         >
-          <div className="text-xs opacity-70 mb-1">Rear Right</div>
+          <div className="text-xs opacity-70 mb-1">右后门</div>
           <div className="text-sm font-semibold flex items-center justify-center gap-2">
             <span
               className={`w-2 h-2 rounded-full ${
                 doorStates.rearRight ? 'bg-red-500 animate-pulse' : 'bg-green-500'
               }`}
             />
-            {doorStates.rearRight ? 'OPEN' : 'CLOSED'}
+            {doorStates.rearRight ? '开启' : '关闭'}
           </div>
         </button>
       </div>
@@ -504,7 +504,7 @@ const CarVisualization: React.FC = () => {
           }
           className="px-6 py-2 bg-tesla-blue hover:bg-blue-600 rounded-lg text-sm font-semibold transition-colors"
         >
-          Close All
+          全部关闭
         </button>
         <button
           onClick={() =>
@@ -519,13 +519,13 @@ const CarVisualization: React.FC = () => {
           }
           className="px-6 py-2 bg-tesla-accent hover:bg-red-600 rounded-lg text-sm font-semibold transition-colors"
         >
-          Open All
+          全部打开
         </button>
       </div>
 
       {/* Instructions */}
       <div className="mt-4 text-center text-sm opacity-70">
-        <p>🖱️ Click and drag to rotate • Scroll to zoom • Click car parts to toggle</p>
+        <p>🖱️ 点击拖拽旋转 • 滚轮缩放 • 点击车辆部件切换状态</p>
       </div>
     </div>
   );
